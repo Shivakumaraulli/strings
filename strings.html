@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    JavaScript....
+Handson-5..
+Strings..
+1 .Count Characters ?
+You are given a string S , and your task is to return an array B ( having a size of 2 ) , where B [ 0 ] contains the count of character A (uppercase) in string S and B [ 1 ] contains the count of character D (uppercase) in string S.
+
+                            const countCharacters = (S) => 
+                    {
+                    const B=[];
+                    let countA=0;
+                    let countD=0;
+                    for(let i=0;i < S.length;i++){
+                        if(S[i]==="A"){
+                        countA++;
+                        }else if(S[i]==="D"){
+                        countD++
+                        }
+                    }
+                    B.push(countA)
+                    B.push(countD)
+                    return B
+                    };
+                        
+
+2. Count the Heads ?
+Tina is given a string S which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string S , she decided to write a code that finds out the count of characters that occur more than once in the string.
+
+var Count_Occ = (s) => 
+                    {
+                    let arr=s.split("").sort();
+                    let heads="";
+                    let visit=[];
+                    let k=0;
+                    let res="";
+                    for(let i=0;i < arr.length;i++){
+                      let count=0;
+                      for(let j=0;j < arr.length;j++){
+                        if(arr[i]===arr[j]){
+                          heads=arr[i];
+                          count++;
+                        }
+                      }
+                      if(!visit.includes(heads) && count>=2){
+                        visit[k]=heads;
+                        visit[k+1]=count;
+                        k=k+2;
+                      }
+
+3.Count the Vowels ?
+You are given a string S containing both uppercase and lowercase letters. You need to find out the number of vowels in the given string.
+
+ var Count_Vowels= (S) => 
+        {
+          let countA=0
+          let Vowels="aeiou";
+          
+          for(let i=0;i < S.length;i++){
+            for(let j=0;j
+    
+
+    
+4.Concatenate the Strings ? 
+
+    
+ You are given two strings 
+        S
+        1
+         and 
+        S
+        2
+         (containing both uppercase and lowercase letters), You need to retrun a string which is the concatenation of both the given strings.
+
+
+        
+ var Concatenate_Strings = (S1, S2) => 
+        {
+          let conStr=""
+          const concat=S1.concat(S2)
+          // conStr='\n'
+          return concat
+        };
+         
+
+    
+
+    
+5.Find Length ?
+
+    
+You are given a string 
+        S
+        , and your task is to return the length of the string 
+        S
+        .
+
+
+        
+ const findLength = (S) => 
+        {
+          const length=S.length
+          return length
+        };
+         
+        
+
+    
+
+    
+6.Find the Winner ?
+
+    
+You are given a string 
+        S
+         consisting of two letters 
+        A
+         and 
+        D
+        ,where each character represent the winner of N games played between Aditya and Danish, where letter 
+        A
+         represents the win of Aditya and letter 
+        D
+         represents the win of Danish. 
+        You need to find out the that which player wins the maximum number of games or there is a draw between them.
+
+
+                
+var Game_Winner = (S) => 
+                    {
+                    let countA=0;
+                    let countD=0;
+                    for(let i=0;i < S.length;i++)
+                        if(S[i]==="A")countA++;
+                        else countD++;
+                    if(countA>countD){
+                        return "Aditya";
+                    }else if(countA < countD){
+                        return "Danish";
+                    }
+                    else {
+                        return "Draw";
+                    }
+                };
+
+    
+7.Join Strings ?
+
+    
+You are given two strings 
+        S
+         and 
+        P
+        , and your task is to concatenate them and return the concatenated string.
+
+
+      
+const joinStrings = (S, P) => 
+      {
+       return (S+P);  
+      };
+       
+      
+
+    
+
+    
+8.Plaindrome Check ?
+
+    
+You are given a string 
+        S
+        , Your task is to check wether the given string is a 
+        P
+        a
+        l
+        i
+        n
+        d
+        r
+        o
+        m
+        e
+         or not.
+        
+        A 
+        P
+        a
+        l
+        i
+        n
+        d
+        r
+        o
+        m
+        e
+         is a string, which turnout same when read in reverse direction.
+        Example: "naman" is a Palindrome.
+        String can contain both upppercase lowercase letters.
+
+
+      
+var Palin_Check = (str) =>
+      {
+        let reverseStr=""
+        for(let i=str.length-1;i>=0;i--){
+          reverseStr+=str[i];
+        }
+        if(reverseStr===str)
+        return "True";
+        else
+        return "False";
+      };
+      
+
+    
+
+    
+9.Reverse the String ? 
+
+    
+You are given a string 
+        S
+        , Your task is to Reverse the string.
+        String can contain both upppercase lowercase letters.
+
+
+        
+var Reverse_String = (str) => 
+        {
+          var reverseStr="";
+          for(let i=str.length-1;i>=0;i--){
+            reverseStr+=str[i];
+          }
+          return reverseStr;
+        };
+         
+        
+
+    
+
+    
+10.Match the Strings ?
+
+    
+You are given two strings 
+        S
+        1
+         and 
+        S
+        2
+        , Your task is to print 
+        Y
+        E
+        S
+         if both strings are same else print 
+        N
+        O
+        .
+
+
+      
+var String_Match = (S1,S2) => 
+      {
+        for(let i=0;i < S1.length;i++){
+          if(S1[i]!==S2[i]){
+            return "NO"
+          }
+        } 
+        return "YES"
+      };
+       
+
+    
+
+    
+11.String Replace ?
+
+    
+You are given a string 
+        S
+        , along with a pattern string and a text string. 
+        You need to repalce the pattern string in 
+        S
+         to the text string.
+
+
+      
+var Replace = (S, pattern , text) => 
+      {
+       let newS=S.replace(pattern,text)
+       return newS;
+      };
+       
+
+    
+
+    
+12.Split the String ?
+
+    
+You are given a string 
+        S
+        , Your task is to split the string with respect to spaces.
+
+
+        
+ 
+        var Split_the_string = (S) => 
+        {
+         let str = '\n'
+         let spl=S.split(str)
+         return spl
+                
+        };
+        
+
+    
+
+    
+13.Count the Vowels and Consonants ?
+
+    
+You are given a string 
+        S
+         containing both uppercase and lowercase letters. 
+        You need to find out the number of vowels and the number of consonants in the given string.
+
+
+    
+var Count_Vowels= (S) => 
+        {
+          let countA=0
+          let Vowels="aeiou";
+          
+          for(let i=0;i < S.length;i++){
+            for(let j=0;j < Vowels.length;j++){
+              if(S[i]===Vowels[j]){
+                countA++
+              }
+            }
+          }
+          return countA
+        };
+        var Count_Consonants= (S) => 
+        {
+          let countB=0
+          let Consonants='bcdfghjklmnpqrstvwxyz'
+          for(let i=0;i < S.length;i++){
+          for(let j=0;j < Consonants.length;j++){
+            if(S[i].toLowerCase()===Consonants[j]){
+              countB++
+            }
+          }
+                  
+        }
+         return countB;
+        };
+        
+
+    
+</body>
+</html>
